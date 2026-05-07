@@ -36,7 +36,8 @@ Qishloq xo'jaligi mahsulotlari va texnikalari marketplace API.
   });
 
   app.enableCors();
-  await app.listen(5002);
-  console.log('🚀 Smart Agro: http://localhost:5002/api/docs');
+  const port = process.env.PORT || 5002;
+  await app.listen(port);
+  console.log(`🚀 Smart Agro: http://localhost:${port}/api/docs`);
 }
 bootstrap();
